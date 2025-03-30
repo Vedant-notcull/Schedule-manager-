@@ -1,0 +1,59 @@
+body {
+    font-size: 15pt;
+}
+.add-from-user{
+  display:flex;
+  flex-direction: column;
+}
+
+.add-from-user input {
+  padding :8px 22px;
+  margin :3px 0px;
+  
+}
+.add-from-user .submit{
+  padding:6px 14px;
+}
+
+
+
+
+
+.task-layout{
+  margin-top:20px;
+  display:flex;
+  flex-direction: column;
+  
+}
+
+.task-box{
+  display:flex;
+  flex-direction: column;
+  height:130px;
+  width:100%;
+}
+.sec1{
+  flex:2;
+  padding:0px 5px;
+  display :flex;
+  justify-content: space-between;
+  background-color: #BDBEC9;
+}
+.sec2{
+  flex:5;
+  background-color: #A76B7F;
+  display :flex;
+}
+.info{
+  flex:3;
+} 
+.btns{
+  display : flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+.pass, .fail{
+  padding:5px 8px;
+  
+}
