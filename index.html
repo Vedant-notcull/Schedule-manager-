@@ -15,6 +15,9 @@
 </head>
 
 <body>
+  <button class="clear"
+  onclick="localStorage.removeItem('schedule');
+">clear</button>
 <div class="add-from-user">
 Name <br>
 <input type="text" placeholder ="Task Name "class="nameInput">
@@ -23,40 +26,16 @@ Name <br>
 Info <br>
 <input type="text" placeholder ="Task Info " class="infoInput"><br>
 <button class="submit"
-onclick ="submitName()"
 >Submit </button>
 </div>
 
 
+<section class="main-task-page ">
 <div class="task-layout">
-  <nav class="task-box"> 
-<div class="sec1">
-     <div class="name">learn</div>
-     <div class="deadline">3.00</div>
+  
 </div>
- <div class="sec2">
-    <div class="info">learn new concept
-    </div>
-    <div class="btns">
-      <button class="pass">completed
-      </button>
-      <button class="fail">failed
-      </button>
-    </div>
- </div>
-  </nav>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-  <script type="module" src="main.js"></script>
+  
+</section>
+<script type="module" src="main.js"></script>
 </body>
 </html>

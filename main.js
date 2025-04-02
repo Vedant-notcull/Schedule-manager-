@@ -1,9 +1,12 @@
-import {schedule} from '../task.js'
+import {schedule as ogschedule} from '../task.js'
 console.log('Hello World!');
-
 let name = document.querySelector('.nameInput')
 let info = document.querySelector('.infoInput')
 let deadline = document.querySelector('.deadlineInput')
+
+let schedule = JSON.parse(localStorage.getItem('schedule')) || ogschedule;
+
+console.log(schedule)
 
 
 function getNewId() {
@@ -14,9 +17,10 @@ function getNewId() {
   }
 }
 
-function addTask(){
+
   document.querySelector('.submit')
   .addEventListener('click', ()=>{
+  
     let newSchedule ={
       id : getNewId(),
       name : name.value,
@@ -25,14 +29,22 @@ function addTask(){
     }
     
     schedule.push(newSchedule)
-    localStorage.setItem('schedule',JSON.stringify(schedule))
+    reloadSchedule()
+    localStorage.setItem('schedule',JSON.stringify(schedule));
+    console.log(schedule)
+    
   })
-}
+
 
 function reloadSchedule(){
-  document.querySelector('.task-layout')
-  .innerHTML += `
-    <nav class="task-box"> 
+localStorage.getItem('schedule')
+
+let taskLayout = document.querySelector('.task-layout')
+taskLayout.innerHTML = '';
+  
+  schedule.forEach((schedule)=>{ 
+    taskLayout.innerHTML += `
+     <nav class="task-box"> 
 <div class="sec1">
      <div class="name">${schedule.name}</div>
      <div class="deadline">${schedule.deadline}</div>
@@ -41,14 +53,18 @@ function reloadSchedule(){
     <div class="info">${schedule.info}
     </div>
     <div class="btns">
-      <button class="pass">completed
+      <button data-schedule-id ="${schedule.id} class="pass">completed
       </button>
-      <button class="fail">failed
+      <button data-schedule-id ="${schedule.id} class="fail">failed
       </button>
     </div>
  </div>
   </nav>
-  `
+    `
+  })
+  
+   
   
   
 }
+reloadSchedule()
