@@ -1,0 +1,128 @@
+body {
+  font-size: 15pt;
+  padding: 65px 0px;
+  background-color: #F1F1F1;
+  position: relative;
+}
+@media(min-width:900px){
+  body{
+    padding: 65px 30px;
+  }
+}
+header {
+  height: 50px;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  justify-content: space-evenly;
+  padding: 10px 11px;
+}
+@media(min-width:900px){
+  header{
+    margin :0 30px 0px 30px;
+  }
+}
+
+
+.part1 {
+  flex: 5;
+  align-content: center;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.part2 {
+  padding-right:20px;
+  flex: 2;
+  display: flex;
+  column-gap: 8px;
+  align-items: center;
+  justify-content: center;
+  text-align :center
+  
+}
+
+.part2 .add-input,
+.part2 .clear {
+  
+  height: 90%;
+  width: 50px;
+  background-color: #D9D9D9;
+  border: none;
+  border-radius: 13px;
+  align-content: center;
+}
+
+.part2 img {
+  text-align: center;
+  height: 50%;
+  margin-top: 4px;
+  
+}
+
+
+/* -------- popup oberlay --------- */
+
+.popup {
+  background-color: #000000BD;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  display: none;
+  justify-content: center;
+}
+
+
+.switch {
+  display: flex;
+}
+
+
+
+/* ------ input bars styling ----- */
+.add-from-user {
+  width:90%;
+  padding:10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.add-from-user input {
+  padding: 15px 15px;
+  margin: 3px 0px;
+  font-size: 16px;
+  border-radius: 12px;
+  color:black;
+  border:1px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04); 
+  
+}
+
+.add-from-user .submit {
+  padding: 17px 15px;
+  font-size: 18px;
+  font-weight:bold;
+  border-radius: 12px;
+  color:white;
+  background-color: #0A76FF;
+  border:none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.input-content {
+  position: absolute;
+  bottom:0px;
+  padding: 15px 0px;
+  width:100%;
+  background-color: #D2D2D2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 15px;
+  border-radius: 13px;
+  border: 1px solid black;
+}

@@ -6,35 +6,85 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>HTML</title>
-  
-  <!-- HTML -->
-  
 
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="/css/header.css">
+ <link rel="stylesheet" href="/css/body.css">
 </head>
 
 <body>
-  <button class="clear"
-  onclick="localStorage.removeItem('schedule');
-">clear</button>
+<header>
+  <div class="part1">TaskList</div>
+  <div class="part2">
+    <button class="add-input">
+      <img src="/images/9312231.png" alt="">
+    </button>
+    <button class="clear">
+      <img src="/images/10147931.png" alt="">
+    </button>
+  </div>
+  
+  
+</header>
+
+
+<div class="popup">
+  <div class="input-content"
+  onclick="event.stopPropagation()">
 <div class="add-from-user">
 Name <br>
-<input type="text" placeholder ="Task Name "class="nameInput">
+<input type="text" placeholder ="Enter name of the Task..."class="nameInput">
  Deadline <br>
-<input type="text" placeholder ="Task Deadline " class="deadlineInput">
+<input type="text" placeholder ="Task to be done at what time?..." class="deadlineInput">
 Info <br>
-<input type="text" placeholder ="Task Info " class="infoInput"><br>
+<input type="text" placeholder ="A little description of the Task..." class="infoInput"><br>
 <button class="submit"
 >Submit </button>
+</div>
+  </div>
+</div>
+
+
+
+<div class="layout">
+  <div class="task-box">
+    <div class="sec1">
+      Task one
+    </div>
+    <div class="sec2">
+      Duetime: todya
+    </div>
+    <div class="sec3">
+      <nav class="info">Descripton:work on the project till 12.30</nav>
+      <nav class="interact">
+        <button class="pass">completed</button>
+        <button class="fail"> Failed</button>
+      </nav>
+    </div>
+  </div>
+  
+    <div class="task-box">
+    <div class="sec1">
+      Task one
+    </div>
+    <div class="sec2">
+      Duetime: todya
+    </div>
+    <div class="sec3">
+      <nav class="info">Descripton:work on the project till 12.30</nav>
+      <nav class="interact">
+        <button class="pass">completed</button>
+        <button class="fail"> Failed</button>
+      </nav>
+    </div>
+  </div>
+
 </div>
 
 
 <section class="main-task-page ">
 <div class="task-layout">
-  
+<!-- items are added by js -->  
 </div>
-  
 </section>
 <script type="module" src="main.js"></script>
 </body>

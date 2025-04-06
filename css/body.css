@@ -1,0 +1,53 @@
+/*  task layout styling  */
+
+.layout{
+  display:flex;
+  flex-direction:column;
+}
+.task-box{
+  margin-top: 15px;
+  padding:15px 15px;
+  background-color: #FAFAFA;
+  border-radius :12px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  row-gap:7px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); 
+}
+
+.sec1{
+  flex:1;
+  font-weight: 700;
+  font-size: 26px;
+}
+.task-box .sec2{
+  flex:1;
+  font-size: 14px;
+  color:#888888;
+}
+
+.sec3{
+  display:flex;
+  font-size: 15px;
+  color:black;
+  column-gap:18px;
+}
+ .info{
+   flex:5;
+ }
+ .interact{
+   flex:1;
+   display:flex;
+   padding:2px;
+   column-gap:5px;
+ }
+ .pass, .fail{
+   padding:6px 10px;
+   border-radius:5px;
+   border:0px;
+   font-size:14px;
+   font-weight:600;
+      background-color:#D9D9D9;
+   color:#000000;
+ }
