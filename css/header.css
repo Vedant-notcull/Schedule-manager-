@@ -1,27 +1,20 @@
-body {
-  font-size: 15pt;
-  padding: 65px 0px;
-  background-color: #F1F1F1;
-  position: relative;
-}
-@media(min-width:900px){
-  body{
-    padding: 65px 30px;
-  }
-}
 header {
+  background-color: #F1F1F1;
   height: 50px;
   position: fixed;
   display: flex;
   width: 100%;
   left: 0px;
+  right:0px;
   top: 0px;
   justify-content: space-evenly;
   padding: 10px 11px;
 }
-@media(min-width:900px){
-  header{
-    margin :0 30px 0px 30px;
+
+@media(min-width:900px) {
+  header {
+    margin: 0 30px 0px 30px;
+    height:60px;
   }
 }
 
@@ -45,7 +38,8 @@ header {
 }
 
 .part2 .add-input,
-.part2 .clear {
+.part2 .clear ,
+.part2 .progress{
   
   height: 90%;
   width: 50px;
@@ -63,6 +57,8 @@ header {
 }
 
 
+
+
 /* -------- popup oberlay --------- */
 
 .popup {
@@ -74,6 +70,7 @@ header {
   height: 100%;
   display: none;
   justify-content: center;
+  z-index: 9999;
 }
 
 
@@ -83,34 +80,44 @@ header {
 
 
 
+
+
 /* ------ input bars styling ----- */
 .add-from-user {
   width:90%;
   padding:10px;
   display: flex;
   flex-direction: column;
+  font-size: 16px;
+  font-weight: bold;
+  row-gap:5px;
+  align-content:center;
+
 }
 
+
 .add-from-user input {
+  width:90%;
   padding: 15px 15px;
-  margin: 3px 0px;
+  margin: 0px 0px;
   font-size: 16px;
   border-radius: 12px;
   color:black;
-  border:1px solid rgba(0, 0, 0, 0.5);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04); 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); 
+  border:none;
+  background-color: white;
   
 }
 
-.add-from-user .submit {
+.add-from-user .submit{
   padding: 17px 15px;
   font-size: 18px;
   font-weight:bold;
   border-radius: 12px;
-  color:white;
-  background-color: #0A76FF;
+  color: black;
+  background-color: #D9D9D9;
   border:none;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 .input-content {
@@ -118,11 +125,80 @@ header {
   bottom:0px;
   padding: 15px 0px;
   width:100%;
-  background-color: #D2D2D2;
+  background-color: #F1F1F1;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 15px;
   border-radius: 13px;
   border: 1px solid black;
+}
+
+/* slide up animation */  
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%); /* start from bottom */
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0); /* end at normal position */
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease-out forwards;
+}
+/* ------------&6-6&-&&,----&&&&&----*/  
+
+
+/* slide down animation */  
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%); /* start off-screen top */
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0); /* end at normal position */
+    opacity: 1;
+  }
+}
+
+.slide-down {
+  animation: slideDown 0.5s ease-out forwards;
+}
+/* ------------&6-6&-&&,----&&&&&----*/  
+
+
+
+
+
+@media(min-width:900px){
+ .add-from-user input, 
+ .add-from-user .submit {
+   padding:27px 15px;
+ }
+ 
+
+}
+
+
+@media(min-width:900px) {
+  .input-content {
+    height: 500px;
+    padding-top :22px;
+  }
+  header{
+    height: 60px;
+  }
+  .part1{
+    font-size:42px ;
+    flex:4;
+  }
+.part2 .add-input,
+.part2 .clear,
+.part2 .progress{
+  width:60px;
+}
+
 }

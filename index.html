@@ -7,8 +7,9 @@
 
   <title>HTML</title>
 
- <link rel="stylesheet" href="/css/header.css">
+
  <link rel="stylesheet" href="/css/body.css">
+ <link rel="stylesheet" href="/css/header.css">
 </head>
 
 <body>
@@ -18,6 +19,12 @@
     <button class="add-input">
       <img src="/images/9312231.png" alt="">
     </button>
+    
+    <a href="progress.html" class="progress">
+    <button class="progress">
+      <img src="/images/sandclock.png" alt="">
+     </button> </a>
+     
     <button class="clear">
       <img src="/images/10147931.png" alt="">
     </button>
@@ -28,13 +35,15 @@
 
 
 <div class="popup">
-  <div class="input-content"
+  <div class="input-content modal slide-up"
   onclick="event.stopPropagation()">
 <div class="add-from-user">
+DueTime <br>
+<input type="time" placeholder="Task to be done at what time?..." class="deadlineInput">
+
 Name <br>
 <input type="text" placeholder ="Enter name of the Task..."class="nameInput">
- Deadline <br>
-<input type="text" placeholder ="Task to be done at what time?..." class="deadlineInput">
+ 
 Info <br>
 <input type="text" placeholder ="A little description of the Task..." class="infoInput"><br>
 <button class="submit"
@@ -45,38 +54,27 @@ Info <br>
 
 
 
+
+
+<section class="overlay">
+<div class="overlay-content">
+  <div class="feedback">
+    What's your feedback ??
+  </div>
+  <div class="feeback-input">
+    <textarea class="cmnt-box"  placeholder="helpoo" ></textarea>
+  </div>
+  <button class="feedback-submit">
+    Submit
+  </button>
+</div>
+</section>
+
+
+
+
 <div class="layout">
-  <div class="task-box">
-    <div class="sec1">
-      Task one
-    </div>
-    <div class="sec2">
-      Duetime: todya
-    </div>
-    <div class="sec3">
-      <nav class="info">Descripton:work on the project till 12.30</nav>
-      <nav class="interact">
-        <button class="pass">completed</button>
-        <button class="fail"> Failed</button>
-      </nav>
-    </div>
-  </div>
   
-    <div class="task-box">
-    <div class="sec1">
-      Task one
-    </div>
-    <div class="sec2">
-      Duetime: todya
-    </div>
-    <div class="sec3">
-      <nav class="info">Descripton:work on the project till 12.30</nav>
-      <nav class="interact">
-        <button class="pass">completed</button>
-        <button class="fail"> Failed</button>
-      </nav>
-    </div>
-  </div>
 
 </div>
 
