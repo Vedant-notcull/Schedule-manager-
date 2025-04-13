@@ -5,7 +5,8 @@ It is very Helpful for those who want to Manage therir daily routine.
 
 It takes input from the user about the tasks he want to set at certain time
 ![Screenshot_2025-04-13-20-51-52-38_f9a7afa717ced9e1fc9be9833291031a](https://github.com/user-attachments/assets/6d02594f-92f4-4616-8a56-ae77a0720688)
-![Screenshot_2025-04-13-20-51-57-06_f9a7afa717ced9e1fc9be9833291031a](https://github.com/user-attachments/assets/ded06fd4-c552-4a96-9b4f-e0f93def7751)
+
+![Screenshot_2025-04-13-20-52-03-68_f9a7afa717ced9e1fc9be9833291031a](https://github.com/user-attachments/assets/9083f98b-54bb-4b8f-91df-74ff806f7f69)
 
 
 After taking the required Data from the User it creates a task box in display with a ompletwd and failed button which would be further used 5o keep track of your routine 
